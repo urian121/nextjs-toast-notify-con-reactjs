@@ -2,21 +2,22 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import toast from 'nextjs-toast-notify';
+import {toast} from 'nextjs-toast-notify';
 import 'nextjs-toast-notify/dist/nextjs-toast-notify.css';
 
 function App() {
   const handleShowToastLeft = () => {
     toast.success('¡La operación se realizó con éxito!', {
-      duration: 8000,
+      duration: 9000,
       progress: true,
       position: 'top-left',
+      transition: 'bottomToTopBounce',
     });
   };
 
   const handleShowToasCenter = () => {
     toast.error('¡La operación se realizó con éxito!', {
-      duration: 8000,
+      duration: 9000,
       progress: true,
       position: 'top-center',
     });
@@ -42,7 +43,7 @@ function App() {
 
   const handleShowToastBottomCenter = () => {
     toast.info('¡La operación se realizó con éxito!', {
-      duration: 5000,
+      duration: 6000,
       progress: true,
       position: 'bottom-center',
       transition: 'bounceIn',
@@ -53,14 +54,12 @@ function App() {
 
   const handleShowToastBottomRight = () => {
     toast.info('¡La operación se realizó con éxito!', {
-      duration: 6000,
+      duration: 7000,
       progress: true,
       position: 'bottom-right',
       transition: ''
     });
   };
-
-
 
   return (
     <>
@@ -72,7 +71,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Next.js Toast Notify</h1>
+      <h1>Nextjs Toast Notify</h1>
       <div className="card">
         <button id="top-left" onClick={handleShowToastLeft}>Top left</button>
         <button id="top-center" onClick={handleShowToasCenter}>Top center</button>
