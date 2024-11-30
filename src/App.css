@@ -14,6 +14,9 @@
 .logo.react {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.logo.nextjs{
+  filter: drop-shadow(0 0 1em #222);
+}
 
 @keyframes logo-spin {
   from {
