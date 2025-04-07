@@ -2,12 +2,11 @@ import reactLogo from "./assets/imgs/react.svg";
 import nextjsLogo from "./assets/imgs/nextjs.svg";
 import "./App.css";
 
-import { toast } from "nextjs-toast-notify";
-import "nextjs-toast-notify/dist/nextjs-toast-notify.css";
+import { showToast } from "nextjs-toast-notify";
 
 function App() {
   const handleShowToastLeft = () => {
-    toast.success("¡La operación se realizó con éxito!", {
+    showToast.success("¡La operación se realizó con éxito!", {
       duration: 9000,
       progress: true,
       position: "top-left",
@@ -16,7 +15,7 @@ function App() {
   };
 
   const handleShowToasCenter = () => {
-    toast.error("¡La operación se realizó con éxito!", {
+    showToast.error("¡La operación se realizó con éxito!", {
       duration: 9000,
       progress: true,
       position: "top-center",
@@ -25,7 +24,7 @@ function App() {
   };
 
   const handleShowToastRight = () => {
-    toast.warning("¡La operación se realizó con éxito!", {
+    showToast.warning("¡La operación se realizó con éxito!", {
       duration: 15000,
       progress: true,
       position: "top-right",
@@ -34,7 +33,7 @@ function App() {
   };
 
   const handleShowToastBottomLeft = () => {
-    toast.info("¡La operación se realizó con éxito!", {
+    showToast.info("¡La operación se realizó con éxito!", {
       duration: 8000,
       progress: true,
       position: "bottom-left",
@@ -43,18 +42,18 @@ function App() {
   };
 
   const handleShowToastBottomCenter = () => {
-    toast.info("¡La operación se realizó con éxito!", {
+    showToast.info("¡La operación se realizó con éxito!", {
       duration: 6000,
       progress: true,
       position: "bottom-center",
       transition: "bottomToTopBounce",
       icon: "🎉",
-      sonido: true,
+      sound: true,
     });
   };
 
   const handleShowToastBottomRight = () => {
-    toast.info("¡La operación se realizó con éxito!", {
+    showToast.info("¡La operación se realizó con éxito!", {
       duration: 7000,
       progress: true,
       position: "bottom-right",
